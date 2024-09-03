@@ -5,9 +5,9 @@
       episodenum = episodenum.substring(0, episodenum.length - 1);
       console.log(episodenum)
       document.getElementById("episodenumber").innerText = episodenum
-      let disposablevar = episodenum.Number()--
+      let disposablevar = Number(episodenum)--
       document.getElementById("prev").href = "https://v3rtual.github.io/pico/" + disposablevar.toString()
-      disposablevar = episodenum.Number()++
+      disposablevar = Number(episodenum)++
       document.getElementById("next").href = "https://v3rtual.github.io/pico/" + disposablevar.toString()
     }
   </script>

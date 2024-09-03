@@ -23,32 +23,42 @@
       footer {
         justify-content: center;
         padding: 5px;
-        display: flex
+        display: flex;
+        padding-top: 65%;
       }
-      .textspace {
+	  img {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  width: 50%;
+		}
+      .textSpace {
         justify-content: center;
-        padding: 25%;
-        display: flex
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+        display: flex;
       }
-      .buttonspace {
-        padding: 25%
+      .buttonSpace {
+        padding-left: 12.5%;
+        padding-right: 12.5%;
       }
       .next {
         float: right
       }
     </style>
   </head>
-  <body >
-    <img src="/begin.png">
+  <body>
+    <img src="begin.png">
     <div class="textSpace">
       ...
     </div>
-    <div id="buttonSpace">
-      <button>BACK</button> <button class="next">NEXT</button>
+    <div class="buttonSpace">
+      <button>BACK</button>
+      <button class="next">NEXT</button>
     </div>
     <footer onLoad="episodenumbers()">
-      <a href="nowhere" id="prev">&lt; Previous Episode  </a>
-      PICO by v3rtual. Currently on episode&nbsp;<none id="episodenumber">0</none>.
+      <a href="nowhere" id="prev">&lt; Previous Episode</a>
+      &ensp;PICO by v3rtual. Currently on episode&nbsp;<none id="episodenumber">0</none>.&ensp;
       <a href="nowhere" id="next">  Next Episode &gt;</a>
     </footer>
   </body>

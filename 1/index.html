@@ -2,6 +2,7 @@
   <script>
     function episodenumbers() {
       let episodenum = window.location.href.toString().slice(31).substring(0, episodenum.length - 1);
+      console.log(episodenum)
       document.getElementById("episodenumber").innerText = episodenum
       let disposablevar = episodenum.Number()--
       document.getElementById("prev").href = "https://v3rtual.github.io/pico/" + disposablevar.toString()

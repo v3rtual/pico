@@ -1,15 +1,19 @@
 <html>
   <script>
     function episodenumbers() {
-      let episodenum = window.location.href.toString().slice(31)
-      let disposablevar
+      let episodenum = window.location.href.toString().slice(31);
       episodenum = episodenum.substring(0, episodenum.length - 1);
-      console.log(episodenum)
-      document.getElementById("episodenumber").innerText = episodenum
-      disposablevar = Number.parseInt(episodenum) --
-      document.getElementById("prev").href = "https://v3rtual.github.io/pico/" + disposablevar.toString()
-      disposablevar = Number.parseInt(episodenum) ++
-      document.getElementById("next").href = "https://v3rtual.github.io/pico/" + disposablevar.toString()
+      // Convert episodenum to an integer
+      let currentEpisode = Number.parseInt(episodenum);
+      // Update the HTML element with the episode number
+      document.getElementById("episodenumber").innerText = episodenum;
+      // Set the href for the previous episode
+      let prevEpisode = currentEpisode - 1;
+      document.getElementById("prev").href = "https://v3rtual.github.io/pico/" + prevEpisode.toString();
+      // Set the href for the next episode
+      let nextEpisode = currentEpisode + 1;
+      document.getElementById("next").href = "https://v3rtual.github.io/pico/" + nextEpisode.toString();
+      // please dont mind this awfully jank approach to getting the episode number.
     }
   </script>
   <head>

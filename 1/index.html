@@ -3,8 +3,10 @@
     function episodenumbers() {
       let episodenum = window.location.href.toString().slice(31).substring(0, episodenum.length - 1);
       document.getElementById("episodenumber").innerText = episodenum
-      document.getElementById("prev").href = "https://v3rtual.github.io/pico/" + episodenum.Number()--.toString()
-      document.getElementById("next").href = "https://v3rtual.github.io/pico/" + episodenum.Number()++.toString()
+      let disposablevar = episodenum.Number()--
+      document.getElementById("prev").href = "https://v3rtual.github.io/pico/" + disposablevar.toString()
+      disposablevar = episodenum.Number()++
+      document.getElementById("next").href = "https://v3rtual.github.io/pico/" + disposablevar.toString()
     }
   </script>
   <head>

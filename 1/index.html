@@ -46,7 +46,7 @@
       	}
     </style>
   </head>
-  <body>
+  <body onLoad="episodenumbers()">
     <img src="begin.png">
     <div class="textSpace">
       ...
@@ -55,7 +55,7 @@
       <button>BACK</button>
       <button class="next">NEXT</button>
     </div>
-    <footer onLoad="episodenumbers()">
+    <footer>
       <a href="nowhere" id="prev">&lt; Previous Episode</a>
       &ensp;PICO by v3rtual. Currently on episode&nbsp;<none id="episodenumber">0</none>.&ensp;
       <a href="nowhere" id="next">  Next Episode &gt;</a>

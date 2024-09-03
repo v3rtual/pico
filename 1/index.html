@@ -1,4 +1,12 @@
 <html>
+  <script>
+    function episodenumbers() {
+      let episodenum = window.location.href.toString().slice(31).substring(0, episodenum.length - 1);
+      document.getElementById("episodenumber").innerText = episodenum
+      document.getElementById("prev").href = "https://v3rtual.github.io/pico/" + episodenum.Number()--.toString()
+      document.getElementById("next").href = "https://v3rtual.github.io/pico/" + episodenum.Number()++.toString()
+    }
+  </script>
   <head>
     <style>
       footer {
@@ -8,9 +16,11 @@
       }
     </style>
   </head>
-  <body>
+  <body onLoad="episodenumbers()">
     <footer>
-      PICO by v3rtual. currently on episode 1. episode released on 00/00/0000.
+      <a href="nowhere" id="prev">&lt; Previous Episode</a>
+      PICO by v3rtual. Currently on episode <none id="episodenumber">0</none>.
+      <a href="nowhere" id="next">&gt; Next Episode</a>
     </footer>
   </body>
 </html>

@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<!--what the flip are you doing.>
 <html>
   <script>
     function episodenumbers() {
@@ -23,10 +25,20 @@
         padding: 5px;
         display: flex
       }
+      .next {
+        float: right;
+      }
     </style>
   </head>
-  <body onLoad="episodenumbers()">
-    <footer>
+  <body >
+    <img src="/begin.png">
+    <div id="textSpace">
+      ...
+    </div>
+    <div id="buttonSpace">
+      <button>BACK</button> <button class="next">NEXT</button>
+    </div>
+    <footer onLoad="episodenumbers()">
       <a href="nowhere" id="prev">&lt; Previous Episode  </a>
       PICO by v3rtual. Currently on episode&nbsp;<none id="episodenumber">0</none>.
       <a href="nowhere" id="next">  Next Episode &gt;</a>

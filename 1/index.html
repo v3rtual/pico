@@ -9,7 +9,8 @@
 		"last text"
 	  ]
 	  let currentframe = 0
-	  function episodenumbers() {
+	  function init() {
+          document.getElementById("text").innerText = speech[currentframe]
 		  let episodenum = window.location.href.toString().slice(31);
 		  episodenum = episodenum.substring(0, episodenum.length - 1);
 		  // Convert episodenum to an integer
@@ -28,7 +29,7 @@
 		  currentframe = currentframe + increment
 		  if(currentframe == 0) {
 			document.getElementById("back").disabled = true
-		  } elseif(currentframe == speech.length {
+		  } else if(currentframe == speech.length - 1) {
 			document.getElementById("next").disabled = true
 		  } else {
 			document.getElementById("back").disabled = false
@@ -66,14 +67,14 @@
       	}
     </style>
   </head>
-  <body onLoad="episodenumbers()">
+  <body onLoad="init()">
     <img id="img" src="0.png">
     <div class="textSpace" id="text">
-      ...
+      Please enable javascript, or this comic will not function.
     </div>
     <div class="buttonSpace">
-      <button id="back">BACK</button>
-      <button class="next" id="next">NEXT</button>
+      <button id="back" onClick="changeframe(-1);" disabled="">BACK</button>
+      <button class="next" id="next" onClick="changeframe(1);">NEXT</button>
     </div>
     <footer>
       <a href="nowhere" id="prev">&lt; Previous Episode</a>
